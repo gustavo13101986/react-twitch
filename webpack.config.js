@@ -30,14 +30,12 @@ module.exports = {
         ]
       },
       {
-          test:/\.css$/,
-          use: [
-              {
-                  loader: MiniCssExtractPlugin.loader,
-              },
-              'css-loader'
-          ]
-      }
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader", "postcss-loader",
+          ],
+      },
     ]
   },
   plugins: [
@@ -47,6 +45,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
         filename: 'assets/[name].css',
+        chunkFilename: 'assets/[name].css'
     })
   ],
   devServer: {
