@@ -1,4 +1,21 @@
-h1 {
-    font-size: 40px;
-    color: blue;
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.btn {
+    @apply m-4 py-2 px-4 rounded;
+}
+
+.btn-blue {
+    @apply bg-red-500 text-white;
+}
+.btn-blue:hover {
+    @apply bg-red-900;
+}
+
+.title {
+    @apply mt-4 text-yellow-500 font-bold text-lg font-poppins;
+    /* text-align: center; */
 }
